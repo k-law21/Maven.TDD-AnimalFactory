@@ -40,4 +40,31 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
-}
+    @Test
+    public void setNameTest() {
+
+        Cat testCat = new Cat("Garfield", new Date(), 1);
+        testCat.setName("Jeff");
+
+        Assert.assertEquals("Jeff", testCat.getName());
+    }
+
+    @Test
+    public void speakTest() {
+        String speakResult = "";
+        Cat testCat = new Cat("Garfield", new Date(), 2);
+        speakResult = testCat.speak();
+
+        Assert.assertEquals("meow!", speakResult);
+    }
+
+
+
+
+    }
+
+
+
+
+
+
